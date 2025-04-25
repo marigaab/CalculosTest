@@ -98,35 +98,36 @@ public class CalculoServiceTest {
 	@Test
 	@DisplayName("Cena 06 - Testar maior numero da lista") 
 	void cenario06() {
-		List <Integer> lista = new ArrayList <> ();
-		lista.add(9);
+		
+	    List<Integer> lista = new ArrayList <> ();
+	    lista.add(9);
 		lista.add(4);
 		lista.add(7);
 		lista.add(3);
 		lista.add(1);
-		
-		int maior = Collections.max(lista);
-		System.out.println("Maior número da lista: " + maior);
-		assertThat(maior).isEqualTo(9);
-		
+	
+	   
+	    int maior = calculoService.maiorNumero(lista);
+	    System.out.println("Maior número da lista: " + maior);
+	    assertEquals(9, maior);
 	}
 
 	@Test
 	@DisplayName("Cena 07 - Testar menor numero da lista") 
 	void cenario07() {
 		
-		List <Integer> lista = new ArrayList <> ();
-		lista.add(9);
-		lista.add(4);
-		lista.add(7);
-		lista.add(3);
-		lista.add(1);
+		 List<Integer> lista = new ArrayList <> ();
+		    lista.add(9);
+			lista.add(4);
+			lista.add(7);
+			lista.add(3);
+			lista.add(1);
+		
+	    int menor = calculoService.menorNumero(lista);
+	    System.out.println("Menor número da lista: " + menor);
+	    assertEquals(1, menor);
+	}
 	
-	int menor = Collections.min(lista);
-	System.out.println("Menor número da lista: " + menor);
-	assertThat(menor).isEqualTo(1);
-	
-}
 	@Test
 	@DisplayName("Cena 08 - Testar numero total de elementos da lista")
 	void cenario08() {
@@ -138,9 +139,9 @@ public class CalculoServiceTest {
 		lista.add(17);
 		lista.add(72);
 		
-		
-		System.out.println("Total de elementos da lista é: " + lista.size());
-		assertEquals(5, lista.size());
+	    int total = calculoService.totalElementos(lista);
+	    System.out.println("Total de elementos da lista é: " + total);
+	    assertEquals(5, total);
 	}
 	
 	@Test

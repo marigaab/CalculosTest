@@ -110,4 +110,25 @@ public class CalculoService {
 		    }
 		    return divisao;
 	  }
+	  
+	  public int maiorNumero (List<Integer> lista) {
+		    if (lista == null || lista.isEmpty()) {
+		        throw new IllegalArgumentException("A lista não pode ser nula ou vazia");
+		    }
+		    return Collections.max(lista);
+		}
+	  
+	  public int menorNumero (List<Integer> lista) {
+		    if (lista == null || lista.isEmpty()) {
+		        throw new IllegalArgumentException("A lista não pode ser nula ou vazia");
+		    }
+		    return Collections.min(lista);
+		}
+	  
+	  public int totalElementos(List<Integer> lista) {
+		    if (lista == null) {
+		        throw new IllegalArgumentException("A lista não pode ser nula");
+		    }
+		    return lista.size();
+		}
 }
