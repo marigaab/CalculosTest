@@ -26,5 +26,7 @@ public class Calculo {
    private int soma;
    private double media;
    private double mediana;
-   
+   private int moda;
+   private int multiplicacao;
+   private int divisao;
 }
